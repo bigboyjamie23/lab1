@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h2>Laptops - 2023</h2>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Order</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in dataProducts %}
+        <tr>
+            <td scope="ro2">{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td><button>Order</button></td>
+        </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

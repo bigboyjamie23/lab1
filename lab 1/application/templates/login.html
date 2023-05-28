@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<div id="login-box">
+    <div class="left">
+        <h1>Login</h1>
+        <form action="{{ url_for('login') }}" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.username(placeholder="Username", value = data.username)}}
+            {{ form.password(placeholder="Password", value = data.password)}}
+            {{ form.login_submit()}}
+        </form>
+    </div>
+</div>
+{% endblock content %}

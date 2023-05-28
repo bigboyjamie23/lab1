@@ -1,0 +1,17 @@
+
+{% extends 'master.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="box a">Welcome to OnlineShopping</div>
+    <div class="box b"> 
+        {% if login %}     
+        <p>Welcome back!</p>
+        {% else %}
+            <p>Already registered?<br><br><a href="/login">Sign In</a></p>
+        {% endif %}
+    </div>
+    <div class="box c">Offers</div>
+    <div class="box d">Recommendations</div>
+</div>
+{% endblock content %}
